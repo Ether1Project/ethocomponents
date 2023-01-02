@@ -1,8 +1,8 @@
 const footerTemplate = document.createElement('template');
 
 footerTemplate.innerHTML = `
-  <link rel='stylesheet' href='dist/css/Fork-Awesome-1.2.0/css/fork-awesome.css'>
-  <link rel='stylesheet' href='dist/bootstrap/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
     footer {
       padding: 0 10px;
@@ -10,6 +10,7 @@ footerTemplate.innerHTML = `
       display: flex;
       flex-shrink: 0;
       justify-content: space-between;
+
       background-color: #681832;
       font-size: 15px;
       color: #FFFFFF;
@@ -23,6 +24,7 @@ footerTemplate.innerHTML = `
     
     ul {
       padding: 0;
+
     }
     
     ul li {
@@ -39,10 +41,12 @@ footerTemplate.innerHTML = `
     a:hover {
       padding-bottom: 5px;
       color: inherit;
+
       box-shadow: inset 0 -2px 0 0 #333;
     }
  
     
+
   </style>
   
   <footer>
@@ -78,6 +82,7 @@ footerTemplate.innerHTML = `
             <ul>
            </ul>
           </div>
+
         </div>
       </div>
       <div class="col-lg-6">
@@ -112,6 +117,7 @@ footerTemplate.innerHTML = `
                 <li><a href="mailto:team@ethoprotocol.com""><i class="fa fa-envelope"></i>  Team</a></li>
               </ul>
             </div>
+
         </div>
       </div>
     </div>
