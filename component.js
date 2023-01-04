@@ -92,6 +92,10 @@ footerTemplate.innerHTML = `
     }
     
     
+  .right {
+    text-align: right;
+    box-shadow: dimgrey;
+  }
   .center {
     text-align: center;
     box-shadow: dimgrey;
@@ -196,13 +200,16 @@ footerTemplate.innerHTML = `
         </div>
       </div>
     </div>
-    <div class="row m-5">
-      <div class="col-sm-9 center">
+    <div class="row m-2">
+      <div class="col-sm-7">
          <i class="fa fa-copyright"></i>  Copyright 2023 - Etho Protocol - All rights reserved
       </div>
+      <div class="col-sm-2 center">
+         <i class="fa fa-fire"></i>  Powered by
+      </div>
+
       <div class="col-sm-3 center">
-        <p>Powered by</p>
-         <img class="img-fluid" width="50%" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
+         <img class="img-fluid" width="128" height="80" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
       </div>
     </div>
     </div>
