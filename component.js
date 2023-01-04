@@ -52,12 +52,18 @@ customElements.define( 'header-component', class Header extends HTMLElement {
               Etho Network
             </a>
             <ul class="dropdown-menu"  aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="https://ethoprotocol.com">Webpage</a></li>
+              <li><a class="dropdown-item" href="https://ethoprotocol.com" target="_blank">Webpage</a></li>
+              <li><a class="dropdown-item" href="https://discord.gg/MFn9Tmz" target="_blank">Discord</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://explorer.ethoprotocol.com">Explorer</a></li>
-              <li><a class="dropdown-item" href="https://stats.ethoprotocol.com">Blockchain stats</a></li>
+              <li><a class="dropdown-item disabled">Mainnet</a></li>
+              <li><a class="dropdown-item" href="https://explorer.ethoprotocol.com" target="_blank">Explorer</a></li>
+              <li><a class="dropdown-item" href="https://stats.ethoprotocol.com" target="_blank">Blockchain stats</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://coinmarketcap.com/currencies/etho-protocol/">Coin market cap</a></li>
+              <li><a class="dropdown-item disabled">Testnet</a></li>
+              <li><a class="dropdown-item" href="https://testnetexplorer.ethoprotocol.com" target="_blank">Explorer</a></li>
+              <li><a class="dropdown-item" href="https://testnetstats.ethoprotocol.com" target="_blank">Blockchain stats</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://coinmarketcap.com/currencies/etho-protocol/" target="_blank">Coin market cap</a></li>
             </ul>
           </li>
         </div>
@@ -126,24 +132,24 @@ footerTemplate.innerHTML = `
           <div class="col-md-4">
           <h5>Social</h5>
             <ul>
-              <li><a href="https://discord.gg/3mE4tZt5SR"><i class="fa fa-discord"></i> Discord</a></li>
-              <li><a href="https://t.me/Ether_1"><i class="fa fa-telegram"></i>  Telegram</a></li>
-              <li><a href="https://twitter.com/EthoProtocol"><i class="fa fa-twitter"></i>  Twitter</a></li>
-              <li><a href="https://github.com/Ether1Project"><i class="fa fa-github"></i>  Github</a></li>
-              <li><a href="https://ethoprotocol.medium.com/"><i class="fa fa-medium"></i>  Medium</a></li>
-              <li><a href="https://www.facebook.com/ethoprotocol"><i class="fa fa-facebook"></i>  Facebook</a></li>
-              <li><a href="https://www.linkedin.com/company/ethoprotocol/"><i class="fa fa-linkedin"></i>  LinkedIn</a></li>
-              <li><a href="https://www.pinterest.com/ethoprotocol"><i class="fa fa-pinterest"></i>  Pinterest</a></li>
-              <li><a href="https://www.reddit.com/r/ethoprotocol/"><i class="fa fa-reddit"></i>  Reddit</a></li>
+              <li><a href="https://discord.gg/3mE4tZt5SR"><i class="fa fa-discord" target="_blank"></i> Discord</a></li>
+              <li><a href="https://t.me/Ether_1"><i class="fa fa-telegram" target="_blank"></i>  Telegram</a></li>
+              <li><a href="https://twitter.com/EthoProtocol"><i class="fa fa-twitter" target="_blank"></i>  Twitter</a></li>
+              <li><a href="https://github.com/Ether1Project"><i class="fa fa-github" target="_blank"></i>  Github</a></li>
+              <li><a href="https://ethoprotocol.medium.com/"><i class="fa fa-medium" target="_blank"></i>  Medium</a></li>
+              <li><a href="https://www.facebook.com/ethoprotocol"><i class="fa fa-facebook" target="_blank"></i>  Facebook</a></li>
+              <li><a href="https://www.linkedin.com/company/ethoprotocol/"><i class="fa fa-linkedin" target="_blank"></i>  LinkedIn</a></li>
+              <li><a href="https://www.pinterest.com/ethoprotocol"><i class="fa fa-pinterest" target="_blank"></i>  Pinterest</a></li>
+              <li><a href="https://www.reddit.com/r/ethoprotocol/"><i class="fa fa-reddit" target="_blank"></i>  Reddit</a></li>
             </ul>
           </div>
           <div class="col-md-4">
           <h5>VPS providers</h5>
             <ul>
-              <li><a href="https://pecuniaplatform.io/"><i class="fa fa-fire"></i>  Pecunia</a></li>
-              <li><a href="https://www.digitalocean.com/"><i class="fa fa-fire"></i>  Contabo</a></li>
-              <li><a href="https://contabo.com/en/"><i class="fa fa-fire"></i>  Digital ocean</a></li>
-              <li><a href="https://www.hetzner.com/"><i class="fa fa-fire"></i>  Hetzner</a></li>
+              <li><a href="https://pecuniaplatform.io/"><i class="fa fa-fire" target="_blank"></i>  Pecunia</a></li>
+              <li><a href="https://www.digitalocean.com/"><i class="fa fa-fire" target="_blank"></i>  Contabo</a></li>
+              <li><a href="https://contabo.com/en/"><i class="fa fa-fire" target="_blank"></i>  Digital ocean</a></li>
+              <li><a href="https://www.hetzner.com/"><i class="fa fa-fire" target="_blank"></i>  Hetzner</a></li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -159,23 +165,23 @@ footerTemplate.innerHTML = `
             <div class="col-md-4">
               <h5>Links</h5>
               <ul>
-                <li><a href="https://ethoprotocol.com/wp-content/uploads/ETHO-Protocol-White-Paper.pdf">Whitepaper</a></li>
-                <li><a href="https://explorer.ethoprotocol.com/">Explorer</a></li>
-                <li><a href="https://explorer.ethoprotocol.com/">2nd explorer</a></li>
-                <li><a href="https://docs.ethoprotocol.com/">Documentation</a></li>
-                <li><a href="https://nodes.ethoprotocol.com/">Node dashboard</a></li>
-                <li><a href="https://bitcointalk.org/index.php?topic=3725742.0">Bitcointalk ANN Thread</a></li>
-                <li><a href="https://ethoprotocol.com/wp-content/uploads/2021/08/ethoblack2021roadmap-scaled.jpg">Roadmap</a></li>
-                <li><a href="https://ethoprotocol.com/wp-content/uploads/etho_pitch_deck_20220424.pdf">Pitchdeck</a></li>
+                <li><a href="https://ethoprotocol.com/wp-content/uploads/ETHO-Protocol-White-Paper.pdf" target="_blank">Whitepaper</a></li>
+                <li><a href="https://explorer.ethoprotocol.com/" target="_blank">Explorer</a></li>
+                <li><a href="https://explorer.ethoprotocol.com/" target="_blank">2nd explorer</a></li>
+                <li><a href="https://docs.ethoprotocol.com/" target="_blank">Documentation</a></li>
+                <li><a href="https://nodes.ethoprotocol.com/" target="_blank">Node dashboard</a></li>
+                <li><a href="https://bitcointalk.org/index.php?topic=3725742.0" target="_blank">Bitcointalk ANN Thread</a></li>
+                <li><a href="https://ethoprotocol.com/wp-content/uploads/2021/08/ethoblack2021roadmap-scaled.jpg target="_blank"">Roadmap</a></li>
+                <li><a href="https://ethoprotocol.com/wp-content/uploads/etho_pitch_deck_20220424.pdf target="_blank"">Pitchdeck</a></li>
               </ul>
             </div>
             <div class="col-md-4">
               <h5>Tools</h5>
               <ul>
-                <li><a href="https://info.ethoprotocol.com/">Info dashboard</a></li>
-                <li><a href="https://status.ethoprotocol.com/">Network stats</a></li>
-                <li><a href="https://stats.ethoprotocol.com/">Chain stats</a></li>
-                <li><a href="https://bridge.ethoprotocol.com/">wETHO Bridge</a></li>
+                <li><a href="https://info.ethoprotocol.com/" target="_blank">Info dashboard</a></li>
+                <li><a href="https://status.ethoprotocol.com/" target="_blank">Network stats</a></li>
+                <li><a href="https://stats.ethoprotocol.com/" target="_blank">Chain stats</a></li>
+                <li><a href="https://bridge.ethoprotocol.com/" target="_blank">wETHO Bridge</a></li>
               </ul>
             </div>
             <div class="col-md-4">
@@ -183,7 +189,7 @@ footerTemplate.innerHTML = `
               <ul>
                 <li><a href="/"><i class="fa fa-map-marker"></i>  Earth</a></li>
                 <li><a href="/"><i class="fa fa-mobile"></i>  +1.888.700.ETHO</a></li>
-                <li><a href="mailto:team@ethoprotocol.com""><i class="fa fa-envelope"></i>  Team</a></li>
+                <li><a href="mailto:team@ethoprotocol.com"" target="_blank"><i class="fa fa-envelope"></i>  Team</a></li>
               </ul>
             </div>
 
