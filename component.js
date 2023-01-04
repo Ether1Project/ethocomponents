@@ -1,10 +1,81 @@
+const headerTemplate = document.createElement('template');
 const footerTemplate = document.createElement('template');
+
+// Check if there is a menu style available, if not use the ETHO default style
+ethocomponent_menustyle=`
+  <style>
+  header {
+      font-size: 20px;
+      color: #FFFFFF;
+  }
+  
+  </style>
+  `;
+
+
+
+headerTemplate.innerHTML = `
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+ ${ethocomponent_menustyle}
+<header>
+ <nav class="navbar navbar-expand navbar-dark" style="background-color: #681832; color: #FFFFFF">
+  <a class="navbar-brand" href="#">
+    <img width="128" height="80" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      ${ethocomponent_menu}
+      <slot name="ethodropdown"></slot>
+    </ul>
+  </div>
+</nav>
+
+  </header>
+`;
+
+customElements.define( 'header-component', class Header extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' }).innerHTML=headerTemplate.innerHTML
+  }
+  
+  connectedCallback() {
+    this.innerHTML=`
+        <section slot="ethodropdown">
+            <li class="nav-itemdropdown">
+            <a class="nav-link dropdown-toggle" style="float: right;color: #FFFFFF" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              Etho Network
+            </a>
+            <ul class="dropdown-menu"  aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="https://ethoprotocol.com">Webpage</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://explorer.ethoprotocol.com">Explorer</a></li>
+              <li><a class="dropdown-item" href="https://stats.ethoprotocol.com">Blockchain stats</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://coinmarketcap.com/currencies/etho-protocol/">Coin market cap</a></li>
+            </ul>
+          </li>
+        </div>
+        </section>
+     `;
+  }
+})
+
+
+
+
 
 footerTemplate.innerHTML = `
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <style>
-    footer {
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">  <style>
+  footer {
       padding: 0 10px;
       list-style: none;
       display: flex;
@@ -17,10 +88,10 @@ footerTemplate.innerHTML = `
     }
     
     
-.center {
-  text-align: center;
-  box-shadow: dimgrey;
-}
+  .center {
+    text-align: center;
+    box-shadow: dimgrey;
+  }
     
     ul {
       padding: 0;
@@ -50,7 +121,7 @@ footerTemplate.innerHTML = `
   </style>
   
   <footer>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row p-4">
       <div class="col-lg-6">
         <div class="row">
@@ -122,8 +193,12 @@ footerTemplate.innerHTML = `
       </div>
     </div>
     <div class="row m-5">
-      <div class="col-lg-12 center">
+      <div class="col-sm-9 center">
          <i class="fa fa-copyright"></i>  Copyright 2023 - Etho Protocol - All rights reserved
+      </div>
+      <div class="col-sm-3 center">
+        <p>Powered by</p>
+         <img class="img-fluid" width="50%" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
       </div>
     </div>
     </div>
@@ -136,10 +211,10 @@ class Footer extends HTMLElement {
   }
   
   connectedCallback() {
-    const shadowRoot = this.attachShadow({mode: 'closed'});
-    
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.appendChild(footerTemplate.content);
   }
 }
 
 customElements.define('footer-component', Footer);
+
