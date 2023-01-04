@@ -17,7 +17,7 @@ headerTemplate.innerHTML = `
  ${ethocomponent_menustyle}
 <header>
  <nav class="navbar navbar-expand navbar-dark" style="background-color: #681832; color: #FFFFFF">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="/">
     <img width="128" height="80" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
