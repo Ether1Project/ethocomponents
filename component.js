@@ -8,10 +8,8 @@ ethocomponent_menustyle=`
       font-size: 20px;
       color: #FFFFFF;
   }
-  
   </style>
   `;
-
 
 
 headerTemplate.innerHTML = `
