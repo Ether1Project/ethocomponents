@@ -29,23 +29,17 @@ headerTemplate.innerHTML = `
  <nav class="navbar navbar-expand navbar-dark" style="background-color: #681832; color: #FFFFFF">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
-      <div class="flexi">
-         <div class="row flexi justify-content-md-center">
-            <div class="col">
-                <a class="navbar-brand" href="/">
-                    <img width="128" height="80" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
-                </a>
-            </div>
- 
-            <div class="col">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-            </div>
-            ${ethocomponent_menu}
-            <slot name="ethodropdown"></slot>
-          </div>
-      </div>
+       <div class="row justify-content-md-center">
+              <a class="navbar-brand" href="/">
+                  <img width="128" height="80" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
+              </a>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+          ${ethocomponent_menu}
+          <slot name="ethodropdown"></slot>
+        </div>
     </ul>
   </div>
 </nav>
@@ -62,7 +56,6 @@ customElements.define( 'header-component', class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML=`
         <section slot="ethodropdown">
-            <div class="col">
               <li class="nav-itemdropdown">
               <a class="nav-link dropdown-toggle" style="float: right;color: #FFFFFF" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                 Etho Network
@@ -82,7 +75,6 @@ customElements.define( 'header-component', class Header extends HTMLElement {
                 <li><a class="dropdown-item" href="https://coinmarketcap.com/currencies/etho-protocol/" target="_blank">Coin market cap</a></li>
               </ul>
             </li>
-        </div>
         </section>
      `;
   }
