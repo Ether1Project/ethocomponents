@@ -8,6 +8,16 @@ ethocomponent_menustyle=`
       font-size: 20px;
       color: #FFFFFF;
   }
+
+  @media (max-width: 900px) {
+    .row {
+      flex-basis: auto;
+      flex-flow: column;
+      flex-wrap: nowrap;
+    }
+  }
+
+  
   </style>
   `;
 
@@ -17,26 +27,31 @@ headerTemplate.innerHTML = `
  ${ethocomponent_menustyle}
 <header>
  <nav class="navbar navbar-expand navbar-dark" style="background-color: #681832; color: #FFFFFF">
-  <a class="navbar-brand" href="/">
-    <img width="128" height="80" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      ${ethocomponent_menu}
-      <slot name="ethodropdown"></slot>
+      <div class="flexi">
+         <div class="row flexi justify-content-md-center">
+            <div class="col">
+                <a class="navbar-brand" href="/">
+                    <img width="128" height="80" src="https://raw.githubusercontent.com/Ether1Project/ethoprotocol-branding/main/EthoProtocol_color.png" crossorigin="anonymous">
+                </a>
+            </div>
+ 
+            <div class="col">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </div>
+            ${ethocomponent_menu}
+            <slot name="ethodropdown"></slot>
+          </div>
+      </div>
     </ul>
   </div>
 </nav>
-
   </header>
 `;
+
 
 customElements.define( 'header-component', class Header extends HTMLElement {
   constructor() {
@@ -47,25 +62,26 @@ customElements.define( 'header-component', class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML=`
         <section slot="ethodropdown">
-            <li class="nav-itemdropdown">
-            <a class="nav-link dropdown-toggle" style="float: right;color: #FFFFFF" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-              Etho Network
-            </a>
-            <ul class="dropdown-menu"  aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="https://ethoprotocol.com" target="_blank">Webpage</a></li>
-              <li><a class="dropdown-item" href="https://discord.gg/MFn9Tmz" target="_blank">Discord</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item disabled">Mainnet</a></li>
-              <li><a class="dropdown-item" href="https://explorer.ethoprotocol.com" target="_blank">Explorer</a></li>
-              <li><a class="dropdown-item" href="https://stats.ethoprotocol.com" target="_blank">Blockchain stats</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item disabled">Testnet</a></li>
-              <li><a class="dropdown-item" href="https://testnetexplorer.ethoprotocol.com" target="_blank">Explorer</a></li>
-              <li><a class="dropdown-item" href="https://testnetstats.ethoprotocol.com" target="_blank">Blockchain stats</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://coinmarketcap.com/currencies/etho-protocol/" target="_blank">Coin market cap</a></li>
-            </ul>
-          </li>
+            <div class="col">
+              <li class="nav-itemdropdown">
+              <a class="nav-link dropdown-toggle" style="float: right;color: #FFFFFF" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                Etho Network
+              </a>
+              <ul class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://ethoprotocol.com" target="_blank">Webpage</a></li>
+                <li><a class="dropdown-item" href="https://discord.gg/MFn9Tmz" target="_blank">Discord</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item disabled">Mainnet</a></li>
+                <li><a class="dropdown-item" href="https://explorer.ethoprotocol.com" target="_blank">Explorer</a></li>
+                <li><a class="dropdown-item" href="https://stats.ethoprotocol.com" target="_blank">Blockchain stats</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item disabled">Testnet</a></li>
+                <li><a class="dropdown-item" href="https://testnetexplorer.ethoprotocol.com" target="_blank">Explorer</a></li>
+                <li><a class="dropdown-item" href="https://testnetstats.ethoprotocol.com" target="_blank">Blockchain stats</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://coinmarketcap.com/currencies/etho-protocol/" target="_blank">Coin market cap</a></li>
+              </ul>
+            </li>
         </div>
         </section>
      `;
