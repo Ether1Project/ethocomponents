@@ -18,9 +18,9 @@ Otherwise use the following.
 
 ```
     <script>let ethocomponent_menu='' +
-      '<div class="col"><li class="nav-item"><a class="nav-link" href="#">Item 1</a></li></div>' +
-      '<div class="col"><li class="nav-item"><a class="nav-link" href="#">Item 2</a></li></div>' +
-      '<div class="col"><li class="nav-item"><a class="nav-link" href="#">Item 3</a></li></div>' +
+      '<li class="nav-item"><a class="nav-link" href="#">Item 1</a></li>' +
+      '<li class="nav-item"><a class="nav-link" href="#">Item 2</a></li>' +
+      '<li class="nav-item"><a class="nav-link" href="#">Item 3</a></li>' +
       '';
     </script>
 

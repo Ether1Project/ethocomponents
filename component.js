@@ -9,7 +9,7 @@ ethocomponent_menustyle=`
       color: #FFFFFF;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 750px) {
     .row {
       flex-basis: auto;
       flex-flow: column;
