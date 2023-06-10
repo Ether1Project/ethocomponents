@@ -55,7 +55,7 @@ customElements.define( 'header-component', class Header extends HTMLElement {
   
   connectedCallback() {
     this.innerHTML=`
-        <section slot="ethodropdown">
+        <div slot="ethodropdown">
               <li class="nav-itemdropdown">
               <a class="nav-link dropdown-toggle" style="float: right;color: #FFFFFF" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                 Etho Network
@@ -75,7 +75,7 @@ customElements.define( 'header-component', class Header extends HTMLElement {
                 <li><a class="dropdown-item" href="https://coinmarketcap.com/currencies/etho-protocol/" target="_blank">Coin market cap</a></li>
               </ul>
             </li>
-        </section>
+        </div>
      `;
   }
 })
