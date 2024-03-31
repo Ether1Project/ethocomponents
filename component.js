@@ -62,7 +62,7 @@ customElements.define( 'header-component', class Header extends HTMLElement {
               </a>
               <ul class="dropdown-menu"  aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="https://ethoprotocol.com" target="_blank">Webpage</a></li>
-                <li><a class="dropdown-item" href="https://discord.gg/MFn9Tmz" target="_blank">Discord</a></li>
+                <li><a class="dropdown-item" href="https://discord.gg/eszAxKWuMS" target="_blank">Discord</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item disabled">Mainnet</a></li>
                 <li><a class="dropdown-item" href="https://explorer.ethoprotocol.com" target="_blank">Explorer</a></li>
