@@ -144,7 +144,7 @@ footerTemplate.innerHTML = `
           <div class="col-md-4">
           <h5>Social</h5>
             <ul>
-              <li><a href="https://discord.gg/3mE4tZt5SR"><i class="fa fa-discord" target="_blank"></i> Discord</a></li>
+              <li><a href="https://discord.gg/eszAxKWuMS"><i class="fa fa-discord" target="_blank"></i> Discord</a></li>
               <li><a href="https://t.me/Ether_1"><i class="fa fa-telegram" target="_blank"></i>  Telegram</a></li>
               <li><a href="https://twitter.com/EthoProtocol"><i class="fa fa-twitter" target="_blank"></i>  Twitter</a></li>
               <li><a href="https://github.com/Ether1Project"><i class="fa fa-github" target="_blank"></i>  Github</a></li>
